@@ -2,15 +2,15 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>Neuen Beitrag erstellen</title>
+  <title>Neues Event erstellen</title>
   <link rel="stylesheet" th:href="@{/profile.css}" />
   <link rel="stylesheet" th:href="@{/create_post.css}" />
 </head>
 <body>
 <div class="form-wrapper">
-  <h2>Neuen Beitrag erstellen</h2>
+  <h2>Neues Event erstellen</h2>
 
-  <form th:action="@{/posts}" th:object="${postForm}" method="post">
+  <form th:action="@{/events}" th:object="${eventForm}" method="post">
     <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
 
     <div class="form-field">
@@ -28,7 +28,7 @@
     <button type="submit" class="btn-primary">Veröffentlichen</button>
   </form>
 
-  <a th:href="@{/posts/{userName}(userName=${authorUserName})}" class="back-link">
+  <a th:href="@{/events/{userName}(userName=${authorUserName})}" class="back-link">
     ← Zurück zu meinen Beiträgen
   </a>
 

@@ -2,6 +2,7 @@ package com.eventplaner.controller.event;
 
 import com.eventplaner.model.UserProfile;
 import com.eventplaner.model.auth.UserRole;
+import com.eventplaner.model.dto.EventForm;
 import com.eventplaner.repository.UserProfileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,6 +10,7 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.server.ResponseStatusException;
@@ -27,6 +29,14 @@ public class EventPageController {
                                com.eventplaner.repository.EventRepository eventRepository) {
         this.userProfileRepository = userProfileRepository;
         this.eventRepository = eventRepository;
+    }
+
+    @GetMapping("/new")
+    public String showCreateEventForm(@ModelAttribute EventForm dto,
+                                      @AuthenticationPrincipal String userName,
+                                      Model model) {
+        model.addAttribute("authorUserName", userName);
+        return "create_event";
     }
 
     @GetMapping("/{userName}")

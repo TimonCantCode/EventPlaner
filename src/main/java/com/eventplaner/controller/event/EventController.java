@@ -29,14 +29,6 @@ public class EventController {
         this.eventRepository = eventRepository;
     }
 
-    @GetMapping("/new")
-    public String showCreateEventForm(@ModelAttribute EventForm dto,
-                                     @AuthenticationPrincipal String userName,
-                                     Model model) {
-        model.addAttribute("authorUserName", userName);
-        return "create_event";
-    }
-
     @PostMapping
     public String createEvent(@Valid @ModelAttribute("eventForm") EventForm dto,
                              BindingResult bindingResult,

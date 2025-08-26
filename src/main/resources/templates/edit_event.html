@@ -2,15 +2,15 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>Edit Post</title>
+  <title>Edit Event</title>
   <link rel="stylesheet" th:href="@{/posts.css}">
   <link rel="stylesheet" th:href="@{/edit_post.css}">
 </head>
 <body>
 <div class="edit-post-container">
-  <h1>Edit Post</h1>
+  <h1>Edit Event</h1>
 
-  <form th:action="@{/posts/{postId}/edit(postId=${post.id})}" th:object="${post}" method="post">
+  <form th:action="@{/events/{eventId}/edit(eventId=${event.id})}" th:object="${event}" method="post">
     <div class="form-group">
       <label for="title">Title:</label>
       <input type="text" id="title" name="title" th:field="*{title}" required>
@@ -23,7 +23,7 @@
 
     <div class="form-actions">
       <button type="submit" class="save-button">Save Changes</button>
-      <a th:href="@{/posts/{userName}(userName=${post.author.userName})}" class="cancel-button">Cancel</a>
+      <a th:href="@{/events/{userName}(userName=${event.author.userName})}" class="cancel-button">Cancel</a>
     </div>
   </form>
 </div>
