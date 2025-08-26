@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Alle Posts</title>
+    <link rel="stylesheet" th:href="@{/profile.css}" />
+    <link rel="stylesheet" th:href="@{/posts.css}" />
+</head>
+<body>
+<div class="logo-header">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/IU_International_Hochschule_Logo_2021_inglese.png"
+         alt="IU Logo"
+         class="iu-logo" />
+</div>
+<h1>Alle Posts</h1>
+
+<div th:each="post : ${posts}" class="user-post-card">
+    <div class="profile-header">
+        <div class="profile-info">
+            <p th:text="${post.author.userName}">@username</p>
+        </div>
+    </div>
+
+    <section class="posts-container">
+        <h4 class="post-title" th:text="${post.title}">Post Title</h4>
+        <p class="post-date" th:text="${#temporals.format(post.createdAt, 'dd.MM.yyyy HH:mm')}">01.01.2025</p>
+        <p class="post-content" th:text="${#strings.abbreviate(post.content, 200)}">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit…
+        </p>
+
+        <div class="post-actions">
+            <!-- Existing edit/delete buttons -->
+            <div th:if="${loggedUserName == post.author.userName or loggedUserRole == 'ROLE_ADMIN'}" class="post-actions">
+                <a th:href="@{/posts/{postId}/edit(postId=${post.id})}" class="edit-button">Bearbeiten</a>
+                <form th:action="@{/posts/{postId}/delete(postId=${post.id})}" method="post" class="delete-form">
+                    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+                    <input type="hidden" name="_method" value="delete"/>
+                    <button type="submit" class="delete-button">Löschen</button>
+                </form>
+            </div>
+            <a th:href="@{/comments/create/{postId}(postId=${post.id})}" class="comment-button">Kommentar schreiben</a>
+           </div>
+    </section>
+    <hr />
+</div>
+
+<a th:href="@{/profile}" class="back-link">← Zurück zu meinem Profil</a>
+</body>
+</html>
