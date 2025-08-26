@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+    <link rel="stylesheet" th:href="@{/profile.css}" />
+</head>
+<body>
+
+<div class="logo-header">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/IU_International_Hochschule_Logo_2021_inglese.png"
+         alt="IU Logo"
+         class="iu-logo" />
+</div>
+
+<div class="profile-header">
+    <div class="profile-info">
+        <h2 th:text="${user.fullName}">Full Name</h2>
+        <p th:text="${user.userName}">@username</p>
+    </div>
+</div>
+
+<div class="field">
+    <span class="label">Email:</span>
+    <span th:text="${user.email}">email@example.com</span>
+</div>
+
+<div class="field">
+    <span class="label">Location:</span>
+    <span th:text="${user.location}">City, Country</span>
+</div>
+
+<div class="field">
+    <span class="label">Member since:</span>
+    <span th:text="${#temporals.format(user.registrationDate, 'dd.MM.yyyy')}">01 January 2022</span>
+</div>
+
+<div class="field">
+    <span class="label">Short Bio:</span>
+    <span th:text="${user.bio}">Short biography goes here...</span>
+</div>
+
+<p class="actions">
+    <a th:href="@{/posts/all-posts}" class="btn btn-click">Alle Posts durchstoebern</a>
+</p>
+
+<a th:href="@{/posts/{userName}(userName=${user.userName})}" class="back-link">
+    Zu meinen Beiträgen
+</a>
+
+<p class="actions">
+    <a th:href="@{/posts/new}" class="btn btn-click">Jetzt neuen Post erstellen</a>
+</p>
+
+<form th:action="@{/logout}" method="post">
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+    <button type="submit" class="btn btn-click">Logout</button>
+</form>
+
+
+
+</body>
+</html>

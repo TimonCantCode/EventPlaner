@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrieren</title>
+
+  <!-- Gleiches CSS wie bei profile.html -->
+  <link rel="stylesheet" th:href="@{/auth.css}" />
+</head>
+<body>
+
+<!-- Logo -->
+<div class="logo-header">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/IU_International_Hochschule_Logo_2021_inglese.png"
+       alt="IU Logo"
+       class="iu-logo" />
+</div>
+
+<!-- Überschrift -->
+<div class="profile-header">
+  <h2>Registrieren</h2>
+</div>
+
+<!-- Registrierungs-Formular -->
+<form th:action="@{/auth/register}" method="post" class="field">
+
+  <div class="field">
+    <span class="label">Benutzername:</span>
+    <input type="text" name="userName" required />
+  </div>
+
+  <div class="field">
+    <span class="label">Name:</span>
+    <input type="text" name="fullName" required />
+  </div>
+
+  <div class="field">
+    <span class="label">E-Mail:</span>
+    <input type="email" name="email" required />
+  </div>
+
+  <div class="field">
+    <span class="label">Ort:</span>
+    <input type="text" name="location" required />
+  </div>
+
+  <div class="field">
+    <span class="label">Bio:</span>
+    <input type="text" name="bio" required />
+  </div>
+
+  <div class="field">
+    <span class="label">Passwort:</span>
+    <input type="password" name="password" minlength="8" required />
+  </div>
+
+  <div class="field">
+    <span class="label">Passwort wiederholen:</span>
+    <input type="password" name="confirm" minlength="8" required />
+  </div>
+
+  <div class="field">
+    <button type="submit">Account anlegen</button>
+  </div>
+
+</form>
+
+<!-- Link zurück zum Login -->
+<div class="field">
+  <span>Bereits registriert? </span>
+  <a th:href="@{/login}">Zum Login</a>
+</div>
+
+</body>
+</html>

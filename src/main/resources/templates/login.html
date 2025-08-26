@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+    <!-- Gleiches CSS wie bei profile.html -->
+    <link rel="stylesheet" th:href="@{/auth.css}" />
+</head>
+<body>
+
+<!-- Logo -->
+<div class="logo-header">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/IU_International_Hochschule_Logo_2021_inglese.png"
+         alt="IU Logo"
+         class="iu-logo" />
+</div>
+
+<!-- Überschrift -->
+<div class="profile-header">
+    <h2>Login</h2>
+</div>
+
+<!-- Login-Formular -->
+<form th:action="@{/auth/login}" method="post" class="field login-card">
+
+    <div class="field">
+        <span class="label">Benutzername:</span>
+        <input type="text" name="userName" required />
+    </div>
+
+    <div class="field">
+        <span class="label">Passwort:</span>
+        <input type="password" name="password" required />
+    </div>
+
+    <div class="field">
+        <button type="submit">Anmelden</button>
+    </div>
+</form>
+
+
+<!-- Link zur Registrierung -->
+<div class="field">
+    <span>Noch keinen Account? </span>
+    <a th:href="@{/register}">Jetzt registrieren</a>
+</div>
+
+</body>
+</html>
