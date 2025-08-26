@@ -1,6 +1,6 @@
-package com.dblayer.repository;
+package com.eventplaner.repository;
 
-import com.dblayer.model.UserProfile;
+import com.eventplaner.model.UserProfile;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

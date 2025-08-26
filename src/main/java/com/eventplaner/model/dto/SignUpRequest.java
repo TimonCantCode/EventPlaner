@@ -1,4 +1,4 @@
-package com.dblayer.model.dto;
+package com.eventplaner.model.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

@@ -1,9 +1,9 @@
-package com.dblayer.controller.auth;
+package com.eventplaner.controller.auth;
 
-import com.dblayer.model.UserProfile;
-import com.dblayer.model.dto.LogInRequest;
-import com.dblayer.model.dto.SignUpRequest;
-import com.dblayer.service.auth.AuthService;
+import com.eventplaner.model.UserProfile;
+import com.eventplaner.model.dto.LogInRequest;
+import com.eventplaner.model.dto.SignUpRequest;
+import com.eventplaner.service.auth.AuthService;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

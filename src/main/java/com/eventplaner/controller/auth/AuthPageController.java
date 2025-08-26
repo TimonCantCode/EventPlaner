@@ -1,4 +1,4 @@
-package com.dblayer.controller.auth;
+package com.eventplaner.controller.auth;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

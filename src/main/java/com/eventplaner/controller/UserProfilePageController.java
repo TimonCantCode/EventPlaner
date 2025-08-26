@@ -1,7 +1,7 @@
-package com.dblayer.controller;
+package com.eventplaner.controller;
 
-import com.dblayer.model.UserProfile;
-import com.dblayer.service.UserProfileService;
+import com.eventplaner.model.UserProfile;
+import com.eventplaner.service.UserProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;

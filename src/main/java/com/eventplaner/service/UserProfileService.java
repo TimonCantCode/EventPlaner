@@ -1,7 +1,7 @@
-package com.dblayer.service;
+package com.eventplaner.service;
 
-import com.dblayer.model.UserProfile;
-import com.dblayer.repository.UserProfileRepository;
+import com.eventplaner.model.UserProfile;
+import com.eventplaner.repository.UserProfileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

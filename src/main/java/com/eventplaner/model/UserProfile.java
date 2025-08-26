@@ -1,7 +1,7 @@
-package com.dblayer.model;
+package com.eventplaner.model;
 
 
-import com.dblayer.model.auth.UserRole;
+import com.eventplaner.model.auth.UserRole;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
