@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title th:text="${user.fullName} + ' – Events'">Events</title>
-  <link rel="stylesheet" th:href="@{/profile.css}" /> <!-- Basis-Styling übernehmen -->
-  <link rel="stylesheet" th:href="@{/posts.css}" />   <!-- Zusatz-Styling für Post-Liste -->
+  <link rel="stylesheet" th:href="@{/styles.css}" /> <!-- Basis-Styling übernehmen -->
 </head>
 <body>
 
@@ -22,15 +21,15 @@
 
 <h3>Beiträge</h3>
 
-<section class="posts-container">
-  <article class="post-card" th:each="event : ${events}">
-    <h4 class="post-title" th:text="${event.title}">Event Title</h4>
-    <p class="post-date" th:text="${#temporals.format(event.createdAt, 'dd.MM.yyyy HH:mm')}">01.01.2025</p>
-    <p class="post-content" th:text="${#strings.abbreviate(event.content, 200)}">
+<section class="events-container">
+  <article class="event-card" th:each="event : ${events}">
+    <h4 class="event-title" th:text="${event.title}">Event Title</h4>
+    <p class="event-date" th:text="${#temporals.format(event.createdAt, 'dd.MM.yyyy HH:mm')}">01.01.2025</p>
+    <p class="event-content" th:text="${#strings.abbreviate(event.content, 200)}">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit…
     </p>
     <!-- Show edit and delete buttons only if the logged-in user is the author -->
-    <div th:if="${loggedUserName == event.author.userName}" class="post-actions">
+    <div th:if="${loggedUserName == event.author.userName}" class="event-actions">
       <a th:href="@{/events/{eventId}/edit(eventId=${event.id})}" class="edit-button">Bearbeiten</a>
       <form th:action="@{/events/{eventId}/delete(event=${event.id})}" method="post" class="delete-form">
         <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>

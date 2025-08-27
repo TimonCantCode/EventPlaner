@@ -27,6 +27,7 @@ public class UserProfilePageController {
        Optional<UserProfile> user = this.userProfileService.getUserProfileByUsername(userName);
        if (user.isPresent()) {
            model.addAttribute("user", user.get());
+           model.addAttribute("loggedUserRole", user.get().getRole());
            return "profile";
        } else {
            return "user-not-found";

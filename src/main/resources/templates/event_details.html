@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+    <link rel="stylesheet" th:href="@{/styles.css}" />
+</head>
+<body>
+
+<main>
+    
+    <section class="events-container">
+        <a th:href="@{/details/{eventId}(eventId=${event.id})}" class="event-card" style="display:block; text-decoration:none; color:inherit;">
+            <h4 class="event-title" th:text="${event.title}">Event Title</h4>
+            <p class="event-date" th:text="${#temporals.format(event.createdAt, 'dd.MM.yyyy HH:mm')}">01.01.2025</p>
+            <p class="event-content" th:text="${#strings.abbreviate(event.content, 200)}">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit…
+            </p>
+        </a>
+        <div class="event-actions">
+            <!-- Existing edit/delete buttons -->
+            <div th:if="${loggedUserName == event.author.userName or loggedUserRole == 'ROLE_ADMIN'}" class="event-actions">
+                <a th:href="@{/events/{eventId}/edit(eventId=${event.id})}" class="edit-button">Bearbeiten</a>
+                <form th:action="@{/events/{eventId}/delete(eventId=${event.id})}" method="post" class="delete-form">
+                    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+                    <input type="hidden" name="_method" value="delete"/>
+                    <button type="submit" class="delete-button">Löschen</button>
+                </form>
+            </div>
+            <a th:href="@{/comments/create/{eventId}(eventId=${event.id})}" class="comment-button">Kommentar schreiben</a>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

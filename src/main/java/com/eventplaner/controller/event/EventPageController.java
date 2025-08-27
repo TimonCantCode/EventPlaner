@@ -51,7 +51,7 @@ public class EventPageController {
         model.addAttribute("user", userProfile);
         model.addAttribute("events", events);
         model.addAttribute("loggedUserName", loggedUserName);
-        return "all-events";
+        return "my-events";
     }
 
     @GetMapping("/all-events")
@@ -83,6 +83,14 @@ public class EventPageController {
 
         model.addAttribute("event", event);
         return "edit_event";
+    }
+
+    @GetMapping("/details/{eventId}")
+    public String showEventDetails(@PathVariable Long eventId, Model model) {
+        com.eventplaner.model.event.Event event = eventRepository.findById(eventId)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+        model.addAttribute("event", event);
+        return "event_details";
     }
 
 }

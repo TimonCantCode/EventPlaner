@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Edit Event</title>
-  <link rel="stylesheet" th:href="@{/posts.css}">
-  <link rel="stylesheet" th:href="@{/edit_post.css}">
+  <link rel="stylesheet" th:href="@{/styles.css}">
 </head>
 <body>
-<div class="edit-post-container">
+<div class="edit-events-container">
   <h1>Edit Event</h1>
 
   <form th:action="@{/events/{eventId}/edit(eventId=${event.id})}" th:object="${event}" method="post">

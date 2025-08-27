@@ -20,7 +20,7 @@ public class SecurityConfig {
     @Bean
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/**", "/all-users").hasRole("ADMIN") // zugriff auf diese pfade ist nur für admins erlaubt
+                        .requestMatchers("/api/**", "/all-users", "/events").hasRole("ADMIN") // zugriff auf diese pfade ist nur für admins erlaubt
                         .requestMatchers(
                                 "/register", "/login", "/signup_error",
                                 "/auth/register", "/auth/login",
