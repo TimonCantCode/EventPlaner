@@ -2948,3 +2948,564 @@ This generated password is for development use only. Your security configuration
 2025-08-28T16:20:05.422+02:00  INFO 1788 --- [EventPlaner] [RMI TCP Connection(6)-192.168.178.68] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-08-28T16:20:05.422+02:00  INFO 1788 --- [EventPlaner] [RMI TCP Connection(6)-192.168.178.68] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2025-08-28T16:20:05.425+02:00  INFO 1788 --- [EventPlaner] [RMI TCP Connection(6)-192.168.178.68] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-08-28T16:30:13.744+02:00  INFO 1788 --- [EventPlaner] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 20 class path changes (5 additions, 0 deletions, 15 modifications)
+2025-08-28T16:30:13.748+02:00  INFO 1788 --- [EventPlaner] [Thread-6] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-28T16:30:13.754+02:00  INFO 1788 --- [EventPlaner] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-28T16:30:13.761+02:00  INFO 1788 --- [EventPlaner] [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-28T16:30:13.765+02:00  INFO 1788 --- [EventPlaner] [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-28T16:30:13.767+02:00  INFO 1788 --- [EventPlaner] [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-28T16:30:13.915+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.eventplaner.EventPlanerApplication   : Starting EventPlanerApplication using Java 24.0.2 with PID 1788 (C:\dev\EventPlaner\build\classes\java\main started by timon in C:\dev\EventPlaner)
+2025-08-28T16:30:13.915+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.eventplaner.EventPlanerApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-08-28T16:30:14.507+02:00  INFO 1788 --- [EventPlaner] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-28T16:30:14.532+02:00  INFO 1788 --- [EventPlaner] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2025-08-28T16:30:14.754+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-28T16:30:14.757+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-28T16:30:14.757+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-08-28T16:30:14.791+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-28T16:30:14.791+02:00  INFO 1788 --- [EventPlaner] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 872 ms
+2025-08-28T16:30:14.936+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-28T16:30:14.942+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-28T16:30:14.955+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-28T16:30:14.957+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-08-28T16:30:14.958+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:file:./data/eventplaner user=SA
+2025-08-28T16:30:14.958+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-08-28T16:30:14.959+02:00  WARN 1788 --- [EventPlaner] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-28T16:30:14.959+02:00  INFO 1788 --- [EventPlaner] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-28T16:30:15.079+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-28T16:30:15.107+02:00  INFO 1788 --- [EventPlaner] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-28T16:30:15.284+02:00  WARN 1788 --- [EventPlaner] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-28T16:30:15.313+02:00  WARN 1788 --- [EventPlaner] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 5ff21f69-fd39-4455-92be-71648eec59e4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-28T16:30:15.315+02:00  INFO 1788 --- [EventPlaner] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-08-28T16:30:15.338+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-28T16:30:15.368+02:00  WARN 1788 --- [EventPlaner] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'filterChain' defined in class path resource [com/eventplaner/config/SecurityConfig.class]: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'filterChain' threw exception with message: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'programmController' method 
+com.eventplaner.controller.programm.ProgrammController#createComment(String, Long, CommentForm)
+to {POST [/comments/create/{eventId}]}: There is already 'commentController' bean method
+com.eventplaner.controller.comment.CommentController#createComment(String, Long, CommentForm) mapped.
+2025-08-28T16:30:15.369+02:00  INFO 1788 --- [EventPlaner] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-28T16:30:15.369+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-08-28T16:30:15.370+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-08-28T16:30:15.371+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-08-28T16:30:15.381+02:00  INFO 1788 --- [EventPlaner] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-08-28T16:30:15.403+02:00 ERROR 1788 --- [EventPlaner] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'filterChain' defined in class path resource [com/eventplaner/config/SecurityConfig.class]: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'filterChain' threw exception with message: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'programmController' method 
+com.eventplaner.controller.programm.ProgrammController#createComment(String, Long, CommentForm)
+to {POST [/comments/create/{eventId}]}: There is already 'commentController' bean method
+com.eventplaner.controller.comment.CommentController#createComment(String, Long, CommentForm) mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.5.jar:3.5.5]
+	at com.eventplaner.EventPlanerApplication.main(EventPlanerApplication.java:10) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.5.jar:3.5.5]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'filterChain' threw exception with message: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'programmController' method 
+com.eventplaner.controller.programm.ProgrammController#createComment(String, Long, CommentForm)
+to {POST [/comments/create/{eventId}]}: There is already 'commentController' bean method
+com.eventplaner.controller.comment.CommentController#createComment(String, Long, CommentForm) mapped.
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:200) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:89) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:169) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.10.jar:6.2.10]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'programmController' method 
+com.eventplaner.controller.programm.ProgrammController#createComment(String, Long, CommentForm)
+to {POST [/comments/create/{eventId}]}: There is already 'commentController' bean method
+com.eventplaner.controller.comment.CommentController#createComment(String, Long, CommentForm) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1278) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.createMvcMatchers(AbstractRequestMatcherRegistry.java:126) ~[spring-security-config-6.5.3.jar:6.5.3]
+	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.requestMatchers(AbstractRequestMatcherRegistry.java:226) ~[spring-security-config-6.5.3.jar:6.5.3]
+	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.requestMatchers(AbstractRequestMatcherRegistry.java:304) ~[spring-security-config-6.5.3.jar:6.5.3]
+	at com.eventplaner.config.SecurityConfig.lambda$filterChain$0(SecurityConfig.java:23) ~[main/:na]
+	at org.springframework.security.config.annotation.web.builders.HttpSecurity.authorizeHttpRequests(HttpSecurity.java:1491) ~[spring-security-config-6.5.3.jar:6.5.3]
+	at com.eventplaner.config.SecurityConfig.filterChain(SecurityConfig.java:22) ~[main/:na]
+	at com.eventplaner.config.SecurityConfig$$SpringCGLIB$$0.CGLIB$filterChain$0(<generated>) ~[main/:na]
+	at com.eventplaner.config.SecurityConfig$$SpringCGLIB$$FastClass$$1.invoke(<generated>) ~[main/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258) ~[spring-core-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:400) ~[spring-context-6.2.10.jar:6.2.10]
+	at com.eventplaner.config.SecurityConfig$$SpringCGLIB$$0.filterChain(<generated>) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:172) ~[spring-beans-6.2.10.jar:6.2.10]
+	... 27 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'programmController' method 
+com.eventplaner.controller.programm.ProgrammController#createComment(String, Long, CommentForm)
+to {POST [/comments/create/{eventId}]}: There is already 'commentController' bean method
+com.eventplaner.controller.comment.CommentController#createComment(String, Long, CommentForm) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:747) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1426) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.BeanFactoryUtils.beansOfTypeIncludingAncestors(BeanFactoryUtils.java:372) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.initHandlerMappings(HandlerMappingIntrospector.java:159) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.afterPropertiesSet(HandlerMappingIntrospector.java:146) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.10.jar:6.2.10]
+	... 48 common frames omitted
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'programmController' method 
+com.eventplaner.controller.programm.ProgrammController#createComment(String, Long, CommentForm)
+to {POST [/comments/create/{eventId}]}: There is already 'commentController' bean method
+com.eventplaner.controller.comment.CommentController#createComment(String, Long, CommentForm) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:676) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:507) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:84) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:987) ~[na:na]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:237) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.10.jar:6.2.10]
+	... 61 common frames omitted
+
+2025-08-28T16:45:08.312+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.eventplaner.EventPlanerApplication   : Starting EventPlanerApplication using Java 24.0.2 with PID 1788 (C:\dev\EventPlaner\build\classes\java\main started by timon in C:\dev\EventPlaner)
+2025-08-28T16:45:08.312+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.eventplaner.EventPlanerApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-08-28T16:45:08.329+02:00  WARN 1788 --- [EventPlaner] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: file [C:\dev\EventPlaner\build\classes\java\main\com\eventplaner\controller\comment\CommentController.class]
+2025-08-28T16:45:08.336+02:00 ERROR 1788 --- [EventPlaner] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: file [C:\dev\EventPlaner\build\classes\java\main\com\eventplaner\controller\comment\CommentController.class]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:510) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.findCandidateComponents(ClassPathScanningCandidateComponentProvider.java:351) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:277) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:346) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:281) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:204) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:172) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.5.jar:3.5.5]
+	at com.eventplaner.EventPlanerApplication.main(EventPlanerApplication.java:10) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.5.jar:3.5.5]
+Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 6 out of bounds for length 0
+	at org.springframework.asm.ClassReader.readShort(ClassReader.java:3642) ~[spring-core-6.2.10.jar:6.2.10]
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:198) ~[spring-core-6.2.10.jar:6.2.10]
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:180) ~[spring-core-6.2.10.jar:6.2.10]
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:166) ~[spring-core-6.2.10.jar:6.2.10]
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:288) ~[spring-core-6.2.10.jar:6.2.10]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:56) ~[spring-core-6.2.10.jar:6.2.10]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48) ~[spring-core-6.2.10.jar:6.2.10]
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103) ~[spring-core-6.2.10.jar:6.2.10]
+	at org.springframework.core.type.classreading.CachingMetadataReaderFactory.getMetadataReader(CachingMetadataReaderFactory.java:122) ~[spring-core-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:470) ~[spring-context-6.2.10.jar:6.2.10]
+	... 23 common frames omitted
+
+2025-08-28T16:45:09.963+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.eventplaner.EventPlanerApplication   : Starting EventPlanerApplication using Java 24.0.2 with PID 1788 (C:\dev\EventPlaner\build\classes\java\main started by timon in C:\dev\EventPlaner)
+2025-08-28T16:45:09.963+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.eventplaner.EventPlanerApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-08-28T16:45:10.916+02:00  INFO 1788 --- [EventPlaner] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-28T16:45:10.951+02:00  INFO 1788 --- [EventPlaner] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 2 JPA repository interfaces.
+2025-08-28T16:45:11.223+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-28T16:45:11.224+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-28T16:45:11.225+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-08-28T16:45:11.261+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-08-28T16:45:11.262+02:00  INFO 1788 --- [EventPlaner] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1294 ms
+2025-08-28T16:45:11.473+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-28T16:45:11.479+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-28T16:45:11.496+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-28T16:45:11.498+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-08-28T16:45:11.501+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:file:./data/eventplaner user=SA
+2025-08-28T16:45:11.501+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-08-28T16:45:11.502+02:00  WARN 1788 --- [EventPlaner] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-28T16:45:11.503+02:00  INFO 1788 --- [EventPlaner] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-28T16:45:11.618+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-28T16:45:11.622+02:00  INFO 1788 --- [EventPlaner] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-28T16:45:11.803+02:00  WARN 1788 --- [EventPlaner] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-28T16:45:11.832+02:00  WARN 1788 --- [EventPlaner] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 17161abe-c40d-40de-a2ef-4f97f26a458f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-28T16:45:11.834+02:00  INFO 1788 --- [EventPlaner] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-08-28T16:45:11.856+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-28T16:45:12.078+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-08-28T16:45:12.119+02:00  WARN 1788 --- [EventPlaner] [restartedMain] thorizationManagerRequestMatcherRegistry : One of the patterns in [/register, /login, /signup_error, /auth/register, /auth/login, /, *.css, /posts/all-posts, /h2-console/**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-08-28T16:45:12.148+02:00  WARN 1788 --- [EventPlaner] [restartedMain] fConfigurer$IgnoreCsrfProtectionRegistry : One of the patterns in [/h2-console/**, /auth/register, auth/login] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-08-28T16:45:12.381+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/eventplaner'
+2025-08-28T16:45:12.435+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-28T16:45:12.469+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-28T16:45:12.476+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.eventplaner.EventPlanerApplication   : Started EventPlanerApplication in 2.642 seconds (process running for 1516.159)
+2025-08-28T16:45:12.479+02:00  INFO 1788 --- [EventPlaner] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-08-28T16:45:23.962+02:00  INFO 1788 --- [EventPlaner] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-28T16:45:23.962+02:00  INFO 1788 --- [EventPlaner] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-28T16:45:23.963+02:00  INFO 1788 --- [EventPlaner] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-08-28T16:48:40.250+02:00  INFO 1788 --- [EventPlaner] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 16 class path changes (0 additions, 0 deletions, 16 modifications)
+2025-08-28T16:48:40.251+02:00  INFO 1788 --- [EventPlaner] [Thread-8] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-28T16:48:40.256+02:00  INFO 1788 --- [EventPlaner] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-28T16:48:40.259+02:00  INFO 1788 --- [EventPlaner] [Thread-8] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-28T16:48:40.260+02:00  INFO 1788 --- [EventPlaner] [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-08-28T16:48:40.260+02:00  INFO 1788 --- [EventPlaner] [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-08-28T16:48:40.386+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.eventplaner.EventPlanerApplication   : Starting EventPlanerApplication using Java 24.0.2 with PID 1788 (C:\dev\EventPlaner\build\classes\java\main started by timon in C:\dev\EventPlaner)
+2025-08-28T16:48:40.387+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.eventplaner.EventPlanerApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-08-28T16:48:40.831+02:00  INFO 1788 --- [EventPlaner] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-28T16:48:40.850+02:00  INFO 1788 --- [EventPlaner] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
+2025-08-28T16:48:41.038+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-28T16:48:41.040+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-28T16:48:41.040+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-08-28T16:48:41.069+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-08-28T16:48:41.069+02:00  INFO 1788 --- [EventPlaner] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 680 ms
+2025-08-28T16:48:41.216+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-28T16:48:41.222+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-28T16:48:41.233+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-28T16:48:41.235+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2025-08-28T16:48:41.236+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn30: url=jdbc:h2:file:./data/eventplaner user=SA
+2025-08-28T16:48:41.237+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2025-08-28T16:48:41.237+02:00  WARN 1788 --- [EventPlaner] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-28T16:48:41.238+02:00  INFO 1788 --- [EventPlaner] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-28T16:48:41.337+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-28T16:48:41.340+02:00  INFO 1788 --- [EventPlaner] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-28T16:48:41.504+02:00  WARN 1788 --- [EventPlaner] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-28T16:48:41.533+02:00  WARN 1788 --- [EventPlaner] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 62a223c4-9eb8-4547-b623-7047fe816d75
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-28T16:48:41.535+02:00  INFO 1788 --- [EventPlaner] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-08-28T16:48:41.556+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-28T16:48:41.769+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-08-28T16:48:41.801+02:00  WARN 1788 --- [EventPlaner] [restartedMain] thorizationManagerRequestMatcherRegistry : One of the patterns in [/register, /login, /signup_error, /auth/register, /auth/login, /, *.css, /posts/all-posts, /h2-console/**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-08-28T16:48:41.812+02:00  WARN 1788 --- [EventPlaner] [restartedMain] fConfigurer$IgnoreCsrfProtectionRegistry : One of the patterns in [/h2-console/**, /auth/register, auth/login] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-08-28T16:48:42.025+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/eventplaner'
+2025-08-28T16:48:42.075+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-28T16:48:42.098+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-28T16:48:42.104+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.eventplaner.EventPlanerApplication   : Started EventPlanerApplication in 1.757 seconds (process running for 1725.787)
+2025-08-28T16:48:42.106+02:00  INFO 1788 --- [EventPlaner] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-08-28T16:48:44.659+02:00  INFO 1788 --- [EventPlaner] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-28T16:48:44.659+02:00  INFO 1788 --- [EventPlaner] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-28T16:48:44.660+02:00  INFO 1788 --- [EventPlaner] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-08-28T16:53:29.604+02:00  INFO 1788 --- [EventPlaner] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-08-28T16:53:29.607+02:00  INFO 1788 --- [EventPlaner] [Thread-17] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-28T16:53:29.614+02:00  INFO 1788 --- [EventPlaner] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-28T16:53:29.619+02:00  INFO 1788 --- [EventPlaner] [Thread-17] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-28T16:53:29.621+02:00  INFO 1788 --- [EventPlaner] [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-08-28T16:53:29.622+02:00  INFO 1788 --- [EventPlaner] [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2025-08-28T16:53:29.814+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.eventplaner.EventPlanerApplication   : Starting EventPlanerApplication using Java 24.0.2 with PID 1788 (C:\dev\EventPlaner\build\classes\java\main started by timon in C:\dev\EventPlaner)
+2025-08-28T16:53:29.815+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.eventplaner.EventPlanerApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-08-28T16:53:30.556+02:00  INFO 1788 --- [EventPlaner] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-28T16:53:30.579+02:00  INFO 1788 --- [EventPlaner] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2025-08-28T16:53:30.880+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-28T16:53:30.883+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-28T16:53:30.883+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-08-28T16:53:30.924+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-08-28T16:53:30.924+02:00  INFO 1788 --- [EventPlaner] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1106 ms
+2025-08-28T16:53:31.268+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-28T16:53:31.277+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-28T16:53:31.293+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-28T16:53:31.295+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2025-08-28T16:53:31.297+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection conn40: url=jdbc:h2:file:./data/eventplaner user=SA
+2025-08-28T16:53:31.298+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2025-08-28T16:53:31.298+02:00  WARN 1788 --- [EventPlaner] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-28T16:53:31.299+02:00  INFO 1788 --- [EventPlaner] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-28T16:53:31.440+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-28T16:53:31.444+02:00  INFO 1788 --- [EventPlaner] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-28T16:53:31.791+02:00  WARN 1788 --- [EventPlaner] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-28T16:53:31.831+02:00  WARN 1788 --- [EventPlaner] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 51799056-21c6-4115-88ae-4ad8f74072c9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-28T16:53:31.833+02:00  INFO 1788 --- [EventPlaner] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-08-28T16:53:31.868+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-28T16:53:32.222+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-08-28T16:53:32.268+02:00  WARN 1788 --- [EventPlaner] [restartedMain] thorizationManagerRequestMatcherRegistry : One of the patterns in [/register, /login, /signup_error, /auth/register, /auth/login, /, *.css, /posts/all-posts, /h2-console/**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-08-28T16:53:32.290+02:00  WARN 1788 --- [EventPlaner] [restartedMain] fConfigurer$IgnoreCsrfProtectionRegistry : One of the patterns in [/h2-console/**, /auth/register, auth/login] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-08-28T16:53:32.619+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/eventplaner'
+2025-08-28T16:53:32.682+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-28T16:53:32.712+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-28T16:53:32.720+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.eventplaner.EventPlanerApplication   : Started EventPlanerApplication in 2.959 seconds (process running for 2016.402)
+2025-08-28T16:53:32.723+02:00  INFO 1788 --- [EventPlaner] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-08-28T16:53:32.733+02:00  INFO 1788 --- [EventPlaner] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-28T16:53:32.733+02:00  INFO 1788 --- [EventPlaner] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-28T16:53:32.734+02:00  INFO 1788 --- [EventPlaner] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-08-28T16:55:35.426+02:00  INFO 1788 --- [EventPlaner] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-08-28T16:55:35.428+02:00  INFO 1788 --- [EventPlaner] [Thread-21] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-28T16:55:35.434+02:00  INFO 1788 --- [EventPlaner] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-28T16:55:35.437+02:00  INFO 1788 --- [EventPlaner] [Thread-21] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-28T16:55:35.440+02:00  INFO 1788 --- [EventPlaner] [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2025-08-28T16:55:35.441+02:00  INFO 1788 --- [EventPlaner] [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2025-08-28T16:55:35.592+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.eventplaner.EventPlanerApplication   : Starting EventPlanerApplication using Java 24.0.2 with PID 1788 (C:\dev\EventPlaner\build\classes\java\main started by timon in C:\dev\EventPlaner)
+2025-08-28T16:55:35.592+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.eventplaner.EventPlanerApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-08-28T16:55:36.255+02:00  INFO 1788 --- [EventPlaner] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-28T16:55:36.286+02:00  INFO 1788 --- [EventPlaner] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 2 JPA repository interfaces.
+2025-08-28T16:55:36.618+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-28T16:55:36.621+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-28T16:55:36.622+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-08-28T16:55:36.667+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-08-28T16:55:36.667+02:00  INFO 1788 --- [EventPlaner] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1072 ms
+2025-08-28T16:55:36.877+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-28T16:55:36.883+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-28T16:55:36.898+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-28T16:55:36.900+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2025-08-28T16:55:36.902+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection conn50: url=jdbc:h2:file:./data/eventplaner user=SA
+2025-08-28T16:55:36.903+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2025-08-28T16:55:36.903+02:00  WARN 1788 --- [EventPlaner] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-28T16:55:36.904+02:00  INFO 1788 --- [EventPlaner] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-6)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-28T16:55:37.012+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-28T16:55:37.016+02:00  INFO 1788 --- [EventPlaner] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-28T16:55:37.214+02:00  WARN 1788 --- [EventPlaner] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-28T16:55:37.245+02:00  WARN 1788 --- [EventPlaner] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 86fc0139-48de-4c0a-8419-1f9814598456
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-28T16:55:37.247+02:00  INFO 1788 --- [EventPlaner] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-08-28T16:55:37.272+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-28T16:55:37.542+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-08-28T16:55:37.604+02:00  WARN 1788 --- [EventPlaner] [restartedMain] thorizationManagerRequestMatcherRegistry : One of the patterns in [/register, /login, /signup_error, /auth/register, /auth/login, /, *.css, /posts/all-posts, /h2-console/**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-08-28T16:55:37.635+02:00  WARN 1788 --- [EventPlaner] [restartedMain] fConfigurer$IgnoreCsrfProtectionRegistry : One of the patterns in [/h2-console/**, /auth/register, auth/login] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-08-28T16:55:37.954+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/eventplaner'
+2025-08-28T16:55:38.014+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-28T16:55:38.045+02:00  INFO 1788 --- [EventPlaner] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-28T16:55:38.053+02:00  INFO 1788 --- [EventPlaner] [restartedMain] com.eventplaner.EventPlanerApplication   : Started EventPlanerApplication in 2.506 seconds (process running for 2141.736)
+2025-08-28T16:55:38.056+02:00  INFO 1788 --- [EventPlaner] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-08-28T16:55:38.064+02:00  INFO 1788 --- [EventPlaner] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-28T16:55:38.065+02:00  INFO 1788 --- [EventPlaner] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-28T16:55:38.066+02:00  INFO 1788 --- [EventPlaner] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-08-28T16:56:11.083+02:00  INFO 1788 --- [EventPlaner] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-28T16:56:11.088+02:00  INFO 1788 --- [EventPlaner] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-28T16:56:11.091+02:00  INFO 1788 --- [EventPlaner] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-28T16:56:11.092+02:00  INFO 1788 --- [EventPlaner] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2025-08-28T16:56:11.093+02:00  INFO 1788 --- [EventPlaner] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2025-08-28T16:56:14.912+02:00  INFO 3424 --- [EventPlaner] [restartedMain] com.eventplaner.EventPlanerApplication   : Starting EventPlanerApplication using Java 24.0.2 with PID 3424 (C:\dev\EventPlaner\build\classes\java\main started by timon in C:\dev\EventPlaner)
+2025-08-28T16:56:14.917+02:00  INFO 3424 --- [EventPlaner] [restartedMain] com.eventplaner.EventPlanerApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-08-28T16:56:15.031+02:00  INFO 3424 --- [EventPlaner] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-28T16:56:15.032+02:00  INFO 3424 --- [EventPlaner] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-28T16:56:17.131+02:00  INFO 3424 --- [EventPlaner] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-28T16:56:17.271+02:00  INFO 3424 --- [EventPlaner] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 2 JPA repository interfaces.
+2025-08-28T16:56:18.437+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-28T16:56:18.457+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-28T16:56:18.457+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-08-28T16:56:18.529+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-28T16:56:18.530+02:00  INFO 3424 --- [EventPlaner] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3496 ms
+2025-08-28T16:56:19.023+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-28T16:56:19.100+02:00  INFO 3424 --- [EventPlaner] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-08-28T16:56:19.149+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-28T16:56:19.587+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-28T16:56:19.636+02:00  INFO 3424 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-28T16:56:20.009+02:00  INFO 3424 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/eventplaner user=SA
+2025-08-28T16:56:20.012+02:00  INFO 3424 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-28T16:56:20.055+02:00  WARN 3424 --- [EventPlaner] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-28T16:56:20.090+02:00  INFO 3424 --- [EventPlaner] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-28T16:56:21.661+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-28T16:56:21.725+02:00  INFO 3424 --- [EventPlaner] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-28T16:56:22.438+02:00  WARN 3424 --- [EventPlaner] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-28T16:56:22.500+02:00  WARN 3424 --- [EventPlaner] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 464c1c8f-854f-49cf-9eec-f3537459e576
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-28T16:56:22.511+02:00  INFO 3424 --- [EventPlaner] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-08-28T16:56:22.627+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-28T16:56:23.147+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-08-28T16:56:23.199+02:00  WARN 3424 --- [EventPlaner] [restartedMain] thorizationManagerRequestMatcherRegistry : One of the patterns in [/register, /login, /signup_error, /auth/register, /auth/login, /, *.css, /posts/all-posts, /h2-console/**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-08-28T16:56:23.230+02:00  WARN 3424 --- [EventPlaner] [restartedMain] fConfigurer$IgnoreCsrfProtectionRegistry : One of the patterns in [/h2-console/**, /auth/register, auth/login] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-08-28T16:56:23.759+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/eventplaner'
+2025-08-28T16:56:23.896+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-28T16:56:24.009+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-28T16:56:24.026+02:00  INFO 3424 --- [EventPlaner] [restartedMain] com.eventplaner.EventPlanerApplication   : Started EventPlanerApplication in 9.999 seconds (process running for 11.179)
+2025-08-28T16:56:24.100+02:00  INFO 3424 --- [EventPlaner] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-28T16:56:24.101+02:00  INFO 3424 --- [EventPlaner] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-28T16:56:24.103+02:00  INFO 3424 --- [EventPlaner] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-08-28T16:57:36.636+02:00  INFO 3424 --- [EventPlaner] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 16 class path changes (0 additions, 0 deletions, 16 modifications)
+2025-08-28T16:57:36.641+02:00  INFO 3424 --- [EventPlaner] [Thread-6] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-28T16:57:36.648+02:00  INFO 3424 --- [EventPlaner] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-28T16:57:36.657+02:00  INFO 3424 --- [EventPlaner] [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-28T16:57:36.662+02:00  INFO 3424 --- [EventPlaner] [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-28T16:57:36.664+02:00  INFO 3424 --- [EventPlaner] [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-28T16:57:36.810+02:00  INFO 3424 --- [EventPlaner] [restartedMain] com.eventplaner.EventPlanerApplication   : Starting EventPlanerApplication using Java 24.0.2 with PID 3424 (C:\dev\EventPlaner\build\classes\java\main started by timon in C:\dev\EventPlaner)
+2025-08-28T16:57:36.811+02:00  INFO 3424 --- [EventPlaner] [restartedMain] com.eventplaner.EventPlanerApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-08-28T16:57:37.398+02:00  INFO 3424 --- [EventPlaner] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-28T16:57:37.421+02:00  INFO 3424 --- [EventPlaner] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2025-08-28T16:57:37.671+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-28T16:57:37.675+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-28T16:57:37.675+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-08-28T16:57:37.721+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-28T16:57:37.721+02:00  INFO 3424 --- [EventPlaner] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 908 ms
+2025-08-28T16:57:37.902+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-28T16:57:37.909+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-28T16:57:37.926+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-28T16:57:37.929+02:00  INFO 3424 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-08-28T16:57:37.931+02:00  INFO 3424 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:file:./data/eventplaner user=SA
+2025-08-28T16:57:37.932+02:00  INFO 3424 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-08-28T16:57:37.933+02:00  WARN 3424 --- [EventPlaner] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-28T16:57:37.933+02:00  INFO 3424 --- [EventPlaner] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-28T16:57:38.107+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-28T16:57:38.113+02:00  INFO 3424 --- [EventPlaner] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-28T16:57:38.291+02:00  WARN 3424 --- [EventPlaner] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-28T16:57:38.319+02:00  WARN 3424 --- [EventPlaner] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7f16885b-e0ec-4c83-b07f-ce5d7bdd3518
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-28T16:57:38.321+02:00  INFO 3424 --- [EventPlaner] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-08-28T16:57:38.343+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-28T16:57:38.564+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-08-28T16:57:38.598+02:00  WARN 3424 --- [EventPlaner] [restartedMain] thorizationManagerRequestMatcherRegistry : One of the patterns in [/register, /login, /signup_error, /auth/register, /auth/login, /, *.css, /posts/all-posts, /h2-console/**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-08-28T16:57:38.615+02:00  WARN 3424 --- [EventPlaner] [restartedMain] fConfigurer$IgnoreCsrfProtectionRegistry : One of the patterns in [/h2-console/**, /auth/register, auth/login] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-08-28T16:57:38.847+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/eventplaner'
+2025-08-28T16:57:38.897+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-28T16:57:38.928+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-28T16:57:38.934+02:00  INFO 3424 --- [EventPlaner] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-28T16:57:38.934+02:00  INFO 3424 --- [EventPlaner] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-28T16:57:38.935+02:00  INFO 3424 --- [EventPlaner] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-08-28T16:57:38.935+02:00  INFO 3424 --- [EventPlaner] [restartedMain] com.eventplaner.EventPlanerApplication   : Started EventPlanerApplication in 2.166 seconds (process running for 86.088)
+2025-08-28T16:57:38.940+02:00  INFO 3424 --- [EventPlaner] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-08-28T16:58:19.095+02:00  INFO 3424 --- [EventPlaner] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 16 class path changes (0 additions, 0 deletions, 16 modifications)
+2025-08-28T16:58:19.097+02:00  INFO 3424 --- [EventPlaner] [Thread-8] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-28T16:58:19.102+02:00  INFO 3424 --- [EventPlaner] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-28T16:58:19.106+02:00  INFO 3424 --- [EventPlaner] [Thread-8] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-28T16:58:19.107+02:00  INFO 3424 --- [EventPlaner] [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-08-28T16:58:19.108+02:00  INFO 3424 --- [EventPlaner] [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-08-28T16:58:19.259+02:00  INFO 3424 --- [EventPlaner] [restartedMain] com.eventplaner.EventPlanerApplication   : Starting EventPlanerApplication using Java 24.0.2 with PID 3424 (C:\dev\EventPlaner\build\classes\java\main started by timon in C:\dev\EventPlaner)
+2025-08-28T16:58:19.260+02:00  INFO 3424 --- [EventPlaner] [restartedMain] com.eventplaner.EventPlanerApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-08-28T16:58:19.788+02:00  INFO 3424 --- [EventPlaner] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-28T16:58:19.809+02:00  INFO 3424 --- [EventPlaner] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
+2025-08-28T16:58:20.016+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-28T16:58:20.017+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-28T16:58:20.018+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-08-28T16:58:20.058+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-28T16:58:20.059+02:00  INFO 3424 --- [EventPlaner] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 796 ms
+2025-08-28T16:58:20.243+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-28T16:58:20.249+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-28T16:58:20.267+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-28T16:58:20.268+02:00  INFO 3424 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-08-28T16:58:20.270+02:00  INFO 3424 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:file:./data/eventplaner user=SA
+2025-08-28T16:58:20.270+02:00  INFO 3424 --- [EventPlaner] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-08-28T16:58:20.271+02:00  WARN 3424 --- [EventPlaner] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-28T16:58:20.271+02:00  INFO 3424 --- [EventPlaner] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-28T16:58:20.416+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-28T16:58:20.420+02:00  INFO 3424 --- [EventPlaner] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-28T16:58:20.627+02:00  WARN 3424 --- [EventPlaner] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-28T16:58:20.660+02:00  WARN 3424 --- [EventPlaner] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 5e84d92a-04f4-4309-87f1-c421ae52b3bc
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-28T16:58:20.662+02:00  INFO 3424 --- [EventPlaner] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-08-28T16:58:20.682+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-28T16:58:20.913+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-08-28T16:58:20.953+02:00  WARN 3424 --- [EventPlaner] [restartedMain] thorizationManagerRequestMatcherRegistry : One of the patterns in [/register, /login, /signup_error, /auth/register, /auth/login, /, *.css, /posts/all-posts, /h2-console/**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-08-28T16:58:20.967+02:00  WARN 3424 --- [EventPlaner] [restartedMain] fConfigurer$IgnoreCsrfProtectionRegistry : One of the patterns in [/h2-console/**, /auth/register, auth/login] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-08-28T16:58:21.189+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/eventplaner'
+2025-08-28T16:58:21.235+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-28T16:58:21.263+02:00  INFO 3424 --- [EventPlaner] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-28T16:58:21.271+02:00  INFO 3424 --- [EventPlaner] [restartedMain] com.eventplaner.EventPlanerApplication   : Started EventPlanerApplication in 2.052 seconds (process running for 128.423)
+2025-08-28T16:58:21.274+02:00  INFO 3424 --- [EventPlaner] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-08-28T16:58:21.386+02:00  INFO 3424 --- [EventPlaner] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-28T16:58:21.386+02:00  INFO 3424 --- [EventPlaner] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-28T16:58:21.387+02:00  INFO 3424 --- [EventPlaner] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-08-28T16:58:24.220+02:00  WARN 3424 --- [EventPlaner] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
