@@ -21,7 +21,7 @@
     </div>
 
     <section class="events-container">
-        <a href="/events/${event.id}" class="event-card" style="display:block; text-decoration:none; color:inherit;">
+        <a th:href="@{/events/details/{eventId}(eventId=${event.id})}" class="event-card" style="display:block; text-decoration:none; color:inherit;">
         <h4 class="event-title" th:text="${event.title}">Event Title</h4>
         <p class="event-date" th:text="${#temporals.format(event.createdAt, 'dd.MM.yyyy HH:mm')}">01.01.2025</p>
         <p class="event-content" th:text="${#strings.abbreviate(event.content, 200)}">
@@ -42,6 +42,37 @@
            </div>
     </section>
     <hr />
+
+    <div class="comments-section">
+        <h5>Kommentare</h5>
+
+        <!-- Check if there are comments -->
+        <div th:if="${event.comments != null and !event.comments.empty}">
+            <div th:each="comment : ${event.comments}" class="comment">
+                <p class="comment-author" th:text="${comment.author.userName}">@commenter</p>
+                <p class="comment-date" th:text="${#temporals.format(comment.createdAt, 'dd.MM.yyyy HH:mm')}">01.01.2025 12:00</p>
+                <p class="comment-text" th:text="${comment.title}">This is a comment text.</p>
+                <p class="comment-text" th:text="${comment.content}">This is a comment text.</p>
+                <div th:if="${loggedUserName != null}" class="comment-actions">
+                    <!-- Show delete button only for admins -->
+                    <div th:if="${loggedUserRole == 'ROLE_ADMIN'}">
+                        <form th:action="@{/comments/delete/{eventId}/{commentId}(commentId=${comment.id}, eventId=${event.id})}" method="post" class="delete-comment-form">
+                            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+                            <button type="submit" class="delete-comment-button">Kommentar löschen</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!-- Show message when there are no comments -->
+        <div th:if="${event.comments == null or event.comments.empty}" class="no-comments">
+            <p>Noch keine Kommentare</p>
+        </div>
+    </div>
 </div>
 
 <a th:href="@{/profile}" class="back-link">← Zurück zu meinem Profil</a>

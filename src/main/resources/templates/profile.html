@@ -7,11 +7,7 @@
 </head>
 <body>
 
-<div class="logo-header">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/IU_International_Hochschule_Logo_2021_inglese.png"
-         alt="IU Logo"
-         class="iu-logo" />
-</div>
+
 
 <div class="profile-header">
     <div class="profile-info">
@@ -41,12 +37,10 @@
 </div>
 
 <p class="actions">
-    <a th:href="@{/events/all-events}" class="btn btn-click">Alle Events durchstoebern</a>
+    <a th:href="@{/events/all-events}" class="btn btn-click">Alle Events</a>
 </p>
 
-<a th:href="@{/events/{userName}(userName=${user.userName})}" class="back-link">
-    Zu meinen Events
-</a>
+<a th:href="@{/events/{userName}(userName=${user.userName})}" class="button">Meine Events</a>
 
 <div th:if="${#strings.trim(loggedUserRole) == 'ROLE_ADMIN'}" class="event-actions">
     <p class="actions">

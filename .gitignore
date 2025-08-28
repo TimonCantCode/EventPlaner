@@ -23,6 +23,7 @@ bin/
 *.iml
 *.ipr
 *.db
+*.gz
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/

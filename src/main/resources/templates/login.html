@@ -3,18 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-
-    <!-- Gleiches CSS wie bei profile.html -->
     <link rel="stylesheet" th:href="@{/styles.css}" />
 </head>
 <body>
 
-<!-- Logo -->
-<div class="logo-header">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/IU_International_Hochschule_Logo_2021_inglese.png"
-         alt="IU Logo"
-         class="iu-logo" />
-</div>
+
 
 <!-- Überschrift -->
 <div class="profile-header">
@@ -25,13 +18,13 @@
 <form th:action="@{/auth/login}" method="post" class="field login-card">
 
     <div class="field">
-        <span class="label">Benutzername:</span>
-        <input type="text" name="userName" required />
+        <span class="form-label">Benutzername:</span>
+        <input class="form-input" type="text" name="userName" required />
     </div>
 
     <div class="field">
-        <span class="label">Passwort:</span>
-        <input type="password" name="password" required />
+        <span class="form-label">Passwort:</span>
+        <input class="form-input" type="password" name="password" required />
     </div>
 
     <div class="field">
@@ -41,7 +34,7 @@
 
 
 <!-- Link zur Registrierung -->
-<div class="field">
+<div class="form-register">
     <span>Noch keinen Account? </span>
     <a th:href="@{/register}">Jetzt registrieren</a>
 </div>

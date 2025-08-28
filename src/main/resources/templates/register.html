@@ -9,15 +9,10 @@
 </head>
 <body>
 
-<!-- Logo -->
-<div class="logo-header">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/IU_International_Hochschule_Logo_2021_inglese.png"
-       alt="IU Logo"
-       class="iu-logo" />
-</div>
+
 
 <!-- Überschrift -->
-<div class="profile-header">
+<div class="login-header">
   <h2>Registrieren</h2>
 </div>
 
@@ -25,38 +20,38 @@
 <form th:action="@{/auth/register}" method="post" class="field">
 
   <div class="field">
-    <span class="label">Benutzername:</span>
-    <input type="text" name="userName" required />
+    <span class="form-label">Benutzername:</span>
+    <input class="form-input" type="text" name="userName" required />
   </div>
 
   <div class="field">
-    <span class="label">Name:</span>
-    <input type="text" name="fullName" required />
+    <span class="form-label">Name:</span>
+    <input class="form-input" type="text" name="fullName" required />
   </div>
 
   <div class="field">
-    <span class="label">E-Mail:</span>
-    <input type="email" name="email" required />
+    <span class="form-label">E-Mail:</span>
+    <input class="form-input" type="email" name="email" required />
   </div>
 
   <div class="field">
-    <span class="label">Ort:</span>
-    <input type="text" name="location" required />
+    <span class="form-label">Ort:</span>
+    <input class="form-input" type="text" name="location" required />
   </div>
 
   <div class="field">
-    <span class="label">Bio:</span>
-    <input type="text" name="bio" required />
+    <span class="form-label">Bio:</span>
+    <input class="form-input" type="text" name="bio" required />
   </div>
 
   <div class="field">
-    <span class="label">Passwort:</span>
-    <input type="password" name="password" minlength="8" required />
+    <span class="form-label">Passwort:</span>
+    <input class="form-input" type="password" name="password" minlength="8" required />
   </div>
 
   <div class="field">
-    <span class="label">Passwort wiederholen:</span>
-    <input type="password" name="confirm" minlength="8" required />
+    <span class="form-label">Passwort wiederholen:</span>
+    <input class="form-input" type="password" name="confirm" minlength="8" required />
   </div>
 
   <div class="field">
@@ -66,7 +61,7 @@
 </form>
 
 <!-- Link zurück zum Login -->
-<div class="field">
+<div class="form-register">
   <span>Bereits registriert? </span>
   <a th:href="@{/login}">Zum Login</a>
 </div>

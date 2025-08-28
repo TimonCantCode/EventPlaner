@@ -1,0 +1,79 @@
+:root {
+    --primary-color: #f0f0f0;
+    --accent: #2e80cc;
+    --border-color: #ccc;
+    --text-color: #333;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3 {
+    text-align: center;
+    font-weight: bold;
+}
+
+button, .button {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button:hover, .button:hover {
+    background-color: darken(var(--accent), 10%);
+}
+
+
+
+
+
+.login-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+form {
+    background-color: var(--border-color);
+    padding: 24px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.field {
+    margin-bottom: 12px;
+    display: flex;
+    padding: 12px;
+}
+
+.form-label {
+    flex: 1;
+    text-align: left;
+    margin-top: 12px;
+}
+
+.form-input {
+    flex: 1;
+    align-items: right;
+}
+
+input {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.form-register {
+    margin-top: 12px;
+    text-align: center;
+}

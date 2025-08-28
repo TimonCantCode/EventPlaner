@@ -6,27 +6,22 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Getter
 @Setter
-public class Event {
+public class Comment {
+
     @Id
     @GeneratedValue
     private Long id;
-    @Column(length = 128, nullable = false)
     private String title;
-    @Column(length = 5000, nullable = false)
     private String content;
     private LocalDateTime createdAt;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(nullable = false)
     private UserProfile author;
-    
-    @OneToMany(mappedBy = "event", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Comment> comments = new ArrayList<>();
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Event event;
 }
