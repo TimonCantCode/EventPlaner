@@ -2,6 +2,8 @@ package com.eventplaner.controller.event;
 
 import com.eventplaner.model.UserProfile;
 import com.eventplaner.model.dto.EventForm;
+import com.eventplaner.model.event.Event;
+import com.eventplaner.repository.EventRepository;
 import com.eventplaner.repository.UserProfileRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,11 +22,11 @@ import java.time.LocalDateTime;
 public class EventController {
 
     private UserProfileRepository userProfileRepository;
-    private com.eventplaner.repository.EventRepository eventRepository;
+    private EventRepository eventRepository;
 
     @Autowired
     public EventController(UserProfileRepository userProfileRepository,
-                           com.eventplaner.repository.EventRepository eventRepository) {
+                           EventRepository eventRepository) {
         this.userProfileRepository = userProfileRepository;
         this.eventRepository = eventRepository;
     }
@@ -92,5 +94,39 @@ public class EventController {
         eventRepository.save(event);
 
         return "redirect:/events/" + userName;
+    }
+
+
+    @PostMapping("/register/{eventId}")
+    public String registerForEvent(@AuthenticationPrincipal String loggedUserName,
+                                   @PathVariable Long eventId, Model model, 
+                                   UserProfile userProfile) {
+        Event event = eventRepository.findById(eventId)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+        UserProfile user = userProfileRepository.findByUserName(loggedUserName)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+
+        if (!event.getParticipants().contains(user)) {
+            event.getParticipants().add(user);
+            eventRepository.save(event);
+        }
+
+        model.addAttribute("loggedUser", userProfile);
+        
+        return "redirect:/events/details/" + eventId;
+    }
+
+    @PostMapping("/unregister/{eventId}")
+    public String unregisterFromEvent(@AuthenticationPrincipal String loggedUserName,
+                                      @PathVariable Long eventId) {
+        Event event = eventRepository.findById(eventId)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+        UserProfile user = userProfileRepository.findByUserName(loggedUserName)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+
+        event.getParticipants().remove(user);
+        eventRepository.save(event);
+
+        return "redirect:/events/details/" + eventId;
     }
 }

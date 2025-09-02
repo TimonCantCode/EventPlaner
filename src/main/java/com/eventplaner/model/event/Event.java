@@ -32,4 +32,7 @@ public class Event {
     @OneToMany(mappedBy = "event", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Comment> comments = new ArrayList<>();
 
+    @ManyToMany
+    private List<UserProfile> participants = new ArrayList<>();
+
 }
