@@ -1,6 +1,6 @@
 package com.eventplaner.controller.programm;
 
-import com.eventplaner.model.dto.CommentForm;
+import com.eventplaner.model.dto.ProgrammForm;
 import com.eventplaner.model.event.Event;
 import com.eventplaner.repository.EventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.server.ResponseStatusException;
 
 @Controller
-@RequestMapping("/programm")
+@RequestMapping("/programms")
 public class ProgrammPageController {
 
     private EventRepository eventRepository;
@@ -26,9 +26,9 @@ public class ProgrammPageController {
     }
 
     @GetMapping("/create/{eventId}")
-    public String showCommentForm(@PathVariable Long eventId,
+    public String showProgrammForm(@PathVariable Long eventId,
                                   @AuthenticationPrincipal String loggedUserName,
-                                  @ModelAttribute CommentForm dto,
+                                  @ModelAttribute ProgrammForm dto,
                                   Model model) {
         Event event = eventRepository.findById(eventId)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));

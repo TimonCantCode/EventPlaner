@@ -31,11 +31,40 @@
                 </form>
                 
             </div>
-            <a th:href="@{/programms/create/{eventId}(eventId=${event.id})}" class="programm-button">Programmpunkt schreiben</a>
+            <div th:if="${loggedUserName == event.author.userName or loggedUserRole == 'ROLE_ADMIN'}">
+                <a th:href="@{/programms/create/{eventId}(eventId=${event.id})}" class="programm-button">Programmpunkt schreiben</a>
+            </div>
             <a th:href="@{/comments/create/{eventId}(eventId=${event.id})}" class="comment-button">Kommentar schreiben</a>
         </div>
     </section>
 
+    <div class="programms-section">
+        <h5>Programmpunkte</h5>
+
+        
+        <div th:if="${event.programms != null and !event.programms.empty}">
+            <div th:each="programm : ${event.programms}" class="programm">
+                <p class="programm-title" th:text="${programm.title}">Programmpunkt Titel</p>
+                <p class="programm-content" th:text="${programm.content}">Programmpunkt Inhalt</p>
+                <div th:if="${loggedUserName != null}" class="programm-actions">
+                    
+                    <div th:if="${loggedUserRole == 'ROLE_ADMIN'}">
+                        <form th:action="@{/programms/delete/{eventId}/{programmId}(programmId=${programm.id}, eventId=${event.id})}" method="post" class="delete-programm-form">
+                            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+                            <button type="submit" class="delete-programm-button">Programmpunkt löschen</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div th:if="${event.programms == null or event.programms.empty}" class="no-programms">
+            <p>Noch keine Programmpunkte</p>
+        </div>
+    </div>
+
+
+    <!-- Comments section -->
     <div class="comments-section">
         <h5>Kommentare</h5>
 
@@ -66,6 +95,8 @@
             <p>Noch keine Kommentare</p>
         </div>
     </div>
+
+    <a th:href="@{/profile}" class="back-link">← Zurück zu meinem Profil</a>
 </main>
 
 </body>

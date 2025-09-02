@@ -10,6 +10,7 @@ import com.eventplaner.repository.UserProfileRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -33,6 +34,7 @@ public class ProgrammController {
         this.eventRepository = eventRepository;
     }
 
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PostMapping("/create/{eventId}")
     public String createProgramm(@AuthenticationPrincipal String loggedUserName,
                                 @PathVariable Long eventId,
@@ -61,7 +63,8 @@ public class ProgrammController {
         return "redirect:/events/details/" + eventId;
 
     }
-    
+
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PostMapping("/delete/{eventId}/{programmId}")
     public String deleteProgramm(@PathVariable Long eventId,
                              @PathVariable Long programmId,
