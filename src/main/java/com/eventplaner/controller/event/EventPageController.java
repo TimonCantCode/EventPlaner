@@ -86,10 +86,16 @@ public class EventPageController {
     }
 
     @GetMapping("/details/{eventId}")
-    public String showEventDetails(@PathVariable Long eventId, Model model) {
+    public String showEventDetails(@PathVariable Long eventId, Model model,
+                                   @AuthenticationPrincipal String loggedUserName) {
         com.eventplaner.model.event.Event event = eventRepository.findById(eventId)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+        UserProfile userProfile = this.userProfileRepository.findByUserName(loggedUserName)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+        UserRole loggedUserRole = userProfile.getRole();
         model.addAttribute("event", event);
+        model.addAttribute("loggedUserName", loggedUserName);
+        model.addAttribute("loggedUserRole", loggedUserRole.name());
         return "event_details";
     }
 
