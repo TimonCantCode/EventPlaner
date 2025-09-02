@@ -20,13 +20,13 @@
 
         <div class="form-field">
             <label for="title">Titel</label>
-            <input id="title" type="text" th:field="*{title}" placeholder="Titel des Beitrags" required maxlength="120" />
+            <input id="title" type="text" th:field="*{title}" placeholder="Titel des Programmpunkts" required maxlength="120" />
             <div class="field-error" th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></div>
         </div>
 
         <div class="form-field">
             <label for="text">Inhalt</label>
-            <textarea id="text" rows="5" th:field="*{content}" placeholder="Dein Kommentar..." required maxlength="1000"></textarea>
+            <textarea id="text" rows="5" th:field="*{content}" placeholder="Programmpunkt Inhalt" required maxlength="1000"></textarea>
             <div class="field-error" th:if="${#fields.hasErrors('content')}" th:errors="*{content}"></div>
         </div>
 
