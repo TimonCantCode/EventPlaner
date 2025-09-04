@@ -16,7 +16,6 @@
                 <p th:text="${event.author.userName}">@username</p>
             </div>
         </div>
-
         <section class="events-container">
             <a th:href="@{/events/details/{eventId}(eventId=${event.id})}" class="event-card" style="display:block; text-decoration:none; color:inherit;">
                 <h4 class="event-title" th:text="${event.title}">Event Title</h4>
@@ -26,7 +25,6 @@
                 </p>
             </a>
             <div class="event-actions">
-                <!-- Existing edit/delete buttons -->
                 <div th:if="${loggedUserName == event.author.userName or loggedUserRole == 'ROLE_ADMIN'}" class="event-actions">
                     <a th:href="@{/events/{eventId}/edit(eventId=${event.id})}" class="edit-button">Bearbeiten</a>
                     <form th:action="@{/events/{eventId}/delete(eventId=${event.id})}" method="post" class="delete-form">
@@ -40,21 +38,23 @@
     </div>
 </div>
 
-<div th:each="event : ${events}" class="user-event-card" th:if="${event.participants.contains(loggedUser)}">
-    <div class="profile-header">
-        <div class="profile-info">
-            <p th:text="${event.author.userName}">@username</p>
+<div>
+    <div th:each="event : ${registeredEvents}" class="user-event-card">
+        <div class="profile-header">
+            <div class="profile-info">
+                <p th:text="${event.author.userName}">@username</p>
+            </div>
         </div>
+        <section class="events-container">
+            <a th:href="@{/events/details/{eventId}(eventId=${event.id})}" class="event-card" style="display:block; text-decoration:none; color:inherit;">
+                <h4 class="event-title" th:text="${event.title}">Event Title</h4>
+                <p class="event-date" th:text="${#temporals.format(event.createdAt, 'dd.MM.yyyy HH:mm')}">01.01.2025</p>
+                <p class="event-content" th:text="${#strings.abbreviate(event.content, 200)}">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit…
+                </p>
+            </a>
+        </section>
     </div>
-    <section class="events-container">
-        <a th:href="@{/events/details/{eventId}(eventId=${event.id})}" class="event-card" style="display:block; text-decoration:none; color:inherit;">
-            <h4 class="event-title" th:text="${event.title}">Event Title</h4>
-            <p class="event-date" th:text="${#temporals.format(event.createdAt, 'dd.MM.yyyy HH:mm')}">01.01.2025</p>
-            <p class="event-content" th:text="${#strings.abbreviate(event.content, 200)}">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit…
-            </p>
-        </a>
-    </section>
 </div>
 
 <a th:href="@{/profile}" class="back-link">← Zurück zu meinem Profil</a>
