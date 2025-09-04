@@ -47,9 +47,11 @@ public class EventPageController {
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
 
         List<com.eventplaner.model.event.Event> events = eventRepository.findByAuthor_UserNameOrderByCreatedAtDesc(userName);
+        List<com.eventplaner.model.event.Event> registeredEvents = eventRepository.findByParticipantsContaining(userProfile);
 
         model.addAttribute("user", userProfile);
         model.addAttribute("events", events);
+        model.addAttribute("registeredEvents", registeredEvents);
         model.addAttribute("loggedUserName", loggedUserName);
         return "my-events";
     }
@@ -96,6 +98,7 @@ public class EventPageController {
         model.addAttribute("event", event);
         model.addAttribute("loggedUserName", loggedUserName);
         model.addAttribute("loggedUserRole", loggedUserRole.name());
+        model.addAttribute("loggedUser", userProfile);
         return "event_details";
     }
 
