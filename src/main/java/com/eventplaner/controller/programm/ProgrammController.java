@@ -19,11 +19,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.time.LocalDateTime;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Controller
 @RequestMapping("/programms")
 public class ProgrammController {
+
+    private static final Logger logger = LoggerFactory.getLogger(ProgrammController.class);
 
     private UserProfileRepository  userProfileRepository;
     private EventRepository eventRepository;
@@ -39,29 +42,26 @@ public class ProgrammController {
     public String createProgramm(@AuthenticationPrincipal String loggedUserName,
                                 @PathVariable Long eventId,
                                 @Valid @ModelAttribute("programmForm") ProgrammForm dto){
-
         Event event = this.eventRepository.findById(eventId)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+
         UserProfile author = this.userProfileRepository.findByUserName(loggedUserName)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
-
         UserProfile user = userProfileRepository.findByUserName(loggedUserName)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+
         if (user.getRole() != UserRole.ROLE_ADMIN) {
             throw new ResponseStatusException(HttpStatus.FORBIDDEN);
         }
-
         Programm programm = new Programm();
         programm.setContent(dto.content());
         programm.setTitle(dto.title());
         programm.setEvent(event);
         programm.setAuthor(author);
-
         event.getProgramms().add(programm);
         this.eventRepository.save(event);
-
+        logger.info("Programmpunkt erstellt: '{}' für Event '{}' von Benutzer: {}", programm.getTitle(), event.getTitle(), loggedUserName);
         return "redirect:/events/details/" + eventId;
-
     }
 
     @PreAuthorize("hasRole('ROLE_ADMIN')")
@@ -87,7 +87,7 @@ public class ProgrammController {
         event.getProgramms().remove(programm);
 
         this.eventRepository.save(event);
-
+        logger.info("Programmpunkt gelöscht: '{}' (ID: {}) für Event '{}' von Benutzer: {}", programm.getTitle(), programmId, event.getTitle(), loggedUserName);
         return "redirect:/events/details/" + eventId;
 
     }

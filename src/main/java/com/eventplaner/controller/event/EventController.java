@@ -17,9 +17,14 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalDateTime;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @Controller
 @RequestMapping("/events")
 public class EventController {
+
+    private static final Logger logger = LoggerFactory.getLogger(EventController.class);
 
     private UserProfileRepository userProfileRepository;
     private EventRepository eventRepository;
@@ -38,6 +43,7 @@ public class EventController {
                              Model model){
 
         if (bindingResult.hasErrors()) {
+            logger.error("Event-Erstellung fehlgeschlagen für Benutzer: {}", userName);
             return "create_event";
         }
 
@@ -51,7 +57,7 @@ public class EventController {
         event.setAuthor(user);
 
         this.eventRepository.save(event);
-
+        logger.info("Event erstellt: '{}' von Benutzer: {}", event.getTitle(), userName);
         return "redirect:/events/" + userName;
     }
 
@@ -69,6 +75,7 @@ public class EventController {
         }
 
         eventRepository.delete(event);
+        logger.info("Event gelöscht: '{}' (ID: {}) von Benutzer: {}", event.getTitle(), eventId, userName);
         return "redirect:/events/" + userName;
     }
 
@@ -92,14 +99,14 @@ public class EventController {
         event.setTitle(dto.title());
         event.setContent(dto.content());
         eventRepository.save(event);
-
+        logger.info("Event bearbeitet: '{}' (ID: {}) von Benutzer: {}", event.getTitle(), eventId, userName);
         return "redirect:/events/" + userName;
     }
 
 
     @PostMapping("/register/{eventId}")
     public String registerForEvent(@AuthenticationPrincipal String loggedUserName,
-                                   @PathVariable Long eventId, Model model, 
+                                   @PathVariable Long eventId, Model model,
                                    UserProfile userProfile) {
         Event event = eventRepository.findById(eventId)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
@@ -109,10 +116,11 @@ public class EventController {
         if (!event.getParticipants().contains(user)) {
             event.getParticipants().add(user);
             eventRepository.save(event);
+            logger.info("Benutzer {} hat sich für Event '{}' (ID: {}) angemeldet", loggedUserName, event.getTitle(), eventId);
         }
 
         model.addAttribute("loggedUser", userProfile);
-        
+
         return "redirect:/events/details/" + eventId;
     }
 
@@ -126,7 +134,7 @@ public class EventController {
 
         event.getParticipants().remove(user);
         eventRepository.save(event);
-
+        logger.info("Benutzer {} hat sich von Event '{}' (ID: {}) abgemeldet", loggedUserName, event.getTitle(), eventId);
         return "redirect:/events/details/" + eventId;
     }
 }

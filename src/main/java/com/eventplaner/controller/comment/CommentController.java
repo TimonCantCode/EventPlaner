@@ -20,10 +20,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalDateTime;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Controller
 @RequestMapping("/comments")
 public class CommentController {
+
+    private static final Logger logger = LoggerFactory.getLogger(CommentController.class);
 
     private UserProfileRepository  userProfileRepository;
     private EventRepository eventRepository;
@@ -53,6 +57,7 @@ public class CommentController {
 
         event.getComments().add(comment);
         this.eventRepository.save(event);
+        logger.info("Kommentar erstellt: '{}' für Event '{}' von Benutzer: {}", comment.getTitle(), event.getTitle(), loggedUserName);
 
         return "redirect:/events/details/" + eventId;
 
@@ -80,6 +85,7 @@ public class CommentController {
         event.getComments().remove(comment);
 
         this.eventRepository.save(event);
+        logger.info("Kommentar gelöscht: '{}' (ID: {}) für Event '{}' von Benutzer: {}", comment.getTitle(), commentId, event.getTitle(), loggeduserName);
 
         return "redirect:/events/details/" + eventId;
 
