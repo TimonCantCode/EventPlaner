@@ -170,6 +170,7 @@ button:hover, .button:hover {
     background-color: white;
     border-radius: 8px;
     border: var(--border-color);
+    cursor: default;
 }
 
 .comments-container {
@@ -180,4 +181,8 @@ button:hover, .button:hover {
     background-color: white;
     border-radius: 8px;
     border: var(--border-color);
+}
+
+.programms-section {
+    cursor: default;
 }

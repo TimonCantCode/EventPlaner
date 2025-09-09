@@ -12,7 +12,7 @@
     
     
     <section class="events-container-details">
-        <a th:href="@{/details/{eventId}(eventId=${event.id})}" class="event-card" style="display:block; text-decoration:none; color:inherit;">
+        <a th:href="@{/details/{eventId}(eventId=${event.id})}" class="event-card" style="cursor: default; display:block; text-decoration:none; color:inherit;">
             <h2 class="event-title" th:text="${event.title}">Event Title</h2>
             <p class="event-content" th:text="${#strings.abbreviate(event.content, 200)}">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit…
@@ -68,7 +68,7 @@
         <h5>Kommentare</h5>
 
         <div th:if="${event.comments != null and !event.comments.empty}">
-            <div th:each="comment : ${event.comments}" class="comment">
+            <div th:each="comment : ${event.comments}" style="margin-bottom: 20px;" class="comment">
                 <p class="comment-author" th:text="${comment.author.userName}">@commenter</p>
                 <p class="comment-date" th:text="${#temporals.format(comment.createdAt, 'dd.MM.yyyy HH:mm')}">01.01.2025 12:00</p>
                 <p class="comment-text" th:text="${comment.title}">This is a comment text.</p>

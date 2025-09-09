@@ -42,7 +42,7 @@ public class AuthService {
         userProfile.setUserName(dto.userName());
         userProfile.setFullName(dto.fullName());
         userProfile.setLocation(dto.location());
-        if (userProfile.getEmail().contains("@iu.org")){
+        if (userProfile.getEmail().contains("@veranstalter.com")) {
             userProfile.setRole(UserRole.ROLE_ADMIN);
         } else {
             userProfile.setRole(UserRole.ROLE_USER);
