@@ -24,10 +24,12 @@ button, .button {
     padding: 10px 20px;
     cursor: pointer;
     text-decoration: none;
+    font-size: 16px;
+    font: inherit;
 }
 
 button:hover, .button:hover {
-    background-color: darken(var(--accent), 10%);
+    background-color: #2466a5;
 }
 
 
@@ -39,7 +41,7 @@ button:hover, .button:hover {
     margin-bottom: 24px;
 }
 
-form {
+.form {
     background-color: var(--border-color);
     padding: 24px;
     border-radius: 8px;
@@ -63,9 +65,6 @@ form {
 .form-input {
     flex: 1;
     align-items: right;
-}
-
-input {
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 8px;
@@ -76,4 +75,109 @@ input {
 .form-register {
     margin-top: 12px;
     text-align: center;
+}
+
+
+
+
+
+
+.profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: white;
+    border-color: var(--border-color);
+    border-radius: 8px;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.actions {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.user-event-card {
+    display: inline-block;
+    margin: 0;
+}
+
+.event-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
+}
+
+.event-card-link {
+    flex: 1;
+    display: block;
+}
+
+.event-card-link:hover {
+    border-radius: 8px;
+    padding: 8px;
+    margin: -8px;
+}
+
+.event-actions {
+    margin-top: auto;
+    padding-top: 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 10;
+}
+
+.events-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    max-width: 300px;
+    min-width: 250px;
+    max-height: 400px;
+    min-height: 360px;
+    margin: 20px;
+    padding: 24px;
+    background-color: white;
+    border-radius: 8px;
+    border: var(--border-color);
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.events-container-details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    margin: 20px;
+    padding: 24px;
+    background-color: white;
+    border-radius: 8px;
+    border: var(--border-color);
+}
+
+.comments-container {
+    justify-content: center;
+    gap: 35px;
+    margin: 20px;
+    padding: 24px;
+    background-color: white;
+    border-radius: 8px;
+    border: var(--border-color);
 }

@@ -7,52 +7,56 @@
 </head>
 <body>
 
+<div class="profile-container">
 
-
-<div class="profile-header">
-    <div class="profile-info">
-        <h2 th:text="${user.fullName}">Full Name</h2>
-        <p th:text="${user.userName}">@username</p>
+    <div class="profile-header">
+        <div class="profile-info">
+            <h2 th:text="${user.fullName}">Full Name</h2>
+            <p th:text="${user.userName}">@username</p>
+        </div>
     </div>
-</div>
 
-<div class="field">
-    <span class="label">Email:</span>
-    <span th:text="${user.email}">email@example.com</span>
-</div>
+    <div class="field">
+        <span class="label">Email:</span>
+        <span th:text="${user.email}">email@example.com</span>
+    </div>
 
-<div class="field">
-    <span class="label">Location:</span>
-    <span th:text="${user.location}">City, Country</span>
-</div>
+    <div class="field">
+        <span class="label">Location:</span>
+        <span th:text="${user.location}">City, Country</span>
+    </div>
 
-<div class="field">
-    <span class="label">Member since:</span>
-    <span th:text="${#temporals.format(user.registrationDate, 'dd.MM.yyyy')}">01 January 2022</span>
-</div>
+    <div class="field">
+        <span class="label">Member since:</span>
+        <span th:text="${#temporals.format(user.registrationDate, 'dd.MM.yyyy')}">01 January 2022</span>
+    </div>
 
-<div class="field">
-    <span class="label">Short Bio:</span>
-    <span th:text="${user.bio}">Short biography goes here...</span>
-</div>
+    <div class="field">
+        <span class="label">Short Bio:</span>
+        <span th:text="${user.bio}">Short biography goes here...</span>
+    </div>
 
-<p class="actions">
-    <a th:href="@{/events/all-events}" class="btn btn-click">Alle Events</a>
-</p>
-
-<a th:href="@{/events/{userName}(userName=${user.userName})}" class="button">Meine Events</a>
-
-<div th:if="${#strings.trim(loggedUserRole) == 'ROLE_ADMIN'}" class="event-actions">
     <p class="actions">
-        <a th:href="@{/events/new}" class="btn btn-click">Jetzt neues Event erstellen</a>
+        <a th:href="@{/events/all-events}" class="button">Alle Events</a>
     </p>
+
+    <p class="actions">
+        <a th:href="@{/events/{userName}(userName=${user.userName})}" class="button">Meine Events</a>
+    </p>
+
+    <div th:if="${#strings.trim(loggedUserRole) == 'ROLE_ADMIN'}" class="actions">
+        <p class="actions">
+            <a th:href="@{/events/new}" class="button">Jetzt neues Event erstellen</a>
+        </p>
+    </div>
+
+
+    <form style="display: flex; justify-content: center; align-items: center; background-color: transparent; padding: 0; border-radius: 0; max-width: none; margin: 0; flex-direction: row;" th:action="@{/logout}" method="post">
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+        <button type="submit" class="button">Logout</button>
+    </form>
+
 </div>
-
-
-<form th:action="@{/logout}" method="post">
-    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
-    <button type="submit" class="btn btn-click">Logout</button>
-</form>
 
 
 
